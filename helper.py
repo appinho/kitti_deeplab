@@ -27,7 +27,10 @@ height = 375
 
 def logits2image(logits):
     logits = logits.astype(np.uint8)
+    print(np.max(logits)
+    print(logits.shape)
     image = np.empty([height,width,3],dtype=float)
+    print(image.shape)
     for i in range(image.shape[0]):
         for j in range(image.shape[1]):
             if(logits[i,j] == 255):
