@@ -36,7 +36,8 @@ image_dir_segmented_colored = image_dir+'segmented_images_colored/'
 with tf.Session(graph=graph) as sess:
     for fname in sorted(os.listdir(image_dir)):
         if fname.endswith(".png"):
-            img = imread(os.path.join(image_dir, fname)) 
+            img = imread(os.path.join(image_dir, fname))
+            print(img)
             img = np.expand_dims(img, axis=0)
             probs = sess.run(softmax, {image_input: img})
             img = tf.squeeze(probs).eval()
