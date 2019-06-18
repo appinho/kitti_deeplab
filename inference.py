@@ -1,6 +1,6 @@
 import os
 import sys
-import scipy
+import scipy.misc
 import numpy as np
 import cv2
 import tensorflow as tf
