@@ -37,7 +37,6 @@ with tf.Session(graph=graph) as sess:
     for fname in sorted(os.listdir(image_dir)):
         if fname.endswith(".png"):
             img = imageio.imread(os.path.join(image_dir, fname))
-            print(img)
             img = np.expand_dims(img, axis=0)
             probs = sess.run(softmax, {image_input: img})
             img = tf.squeeze(probs).eval()
