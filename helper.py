@@ -27,7 +27,7 @@ height = 375
 
 def logits2image(logits):
     logits = logits.astype(np.uint8)
-    print(np.max(logits)
+    print(np.max(logits))
     print(logits)
     image = np.empty([height,width,3],dtype=float)
     print(image.shape)
